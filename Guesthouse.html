@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHIVAM GUEST HOUSE | Near AIIMS Main Gate, Deoghar</title>
+    <meta name="description" content="Book affordable rooms at SHIVAM GUEST HOUSE, located nearest to the AIIMS Deoghar main gate. AC rooms, attached bathrooms, and 24/7 electricity.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --accent-color: #e53e3e;
+            --bg-light: #f7fafc;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { color: var(--text-dark); background-color: #fff; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        
+        /* Navigation */
+        header { background: #fff; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary-color); }
+        .logo span { color: var(--accent-color); }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a:hover { color: var(--accent-color); }
+        .btn-book-nav { background: var(--accent-color); color: #fff; padding: 0.5rem 1rem; border-radius: 5px; font-weight: 600; }
+
+        /* Hero Section */
+        .hero { 
+            /* Using the exterior photo for the banner */
+            background: linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.8)), url('21960.jpg') center/cover; 
+            height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #fff; padding: 0 20px; 
+        }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 700px; }
+        .btn-primary { background: var(--accent-color); color: #fff; padding: 1rem 2rem; font-size: 1.1rem; border-radius: 5px; font-weight: 600; display: inline-block; transition: 0.3s; border: none; cursor: pointer; }
+        .btn-primary:hover { background: #c53030; }
+
+        /* Sections */
+        section { padding: 5rem 5%; }
+        .section-title { text-align: center; font-size: 2.5rem; color: var(--primary-color); margin-bottom: 3rem; }
+
+        /* About */
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: center; }
+        .feature-card { padding: 2rem; background: var(--bg-light); border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .feature-card i { font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem; }
+
+        /* Rooms */
+        .rooms-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .room-card { border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: 0.3s; display: flex; flex-direction: column; }
+        .room-card:hover { transform: translateY(-5px); }
+        .room-img { width: 100%; height: 220px; object-fit: cover; }
+        .room-info { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
+        .room-price { font-size: 1.5rem; color: var(--accent-color); font-weight: 700; margin: 0.5rem 0; }
+        .amenities { color: var(--text-light); font-size: 0.9rem; margin-bottom: 1rem; flex-grow: 1; }
+
+        /* Booking Form */
+        .booking-section { background: var(--primary-color); color: #fff; }
+        .booking-section .section-title { color: #fff; }
+        .booking-form { max-width: 800px; margin: 0 auto; background: #fff; padding: 2rem; border-radius: 10px; color: var(--text-dark); display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .form-group { display: flex; flex-direction: column; }
+        .form-group label { font-weight: 600; margin-bottom: 0.5rem; }
+        .form-group input, .form-group select { padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px; font-family: inherit; }
+
+        /* Contact */
+        .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+        .contact-info p { margin-bottom: 1rem; font-size: 1.1rem; }
+        .contact-info i { color: var(--accent-color); margin-right: 10px; width: 20px; }
+        .map-container { background: #eee; border-radius: 10px; display: flex; align-items: center; justify-content: center; min-height: 300px; text-align: center; padding: 2rem; }
+
+        /* WhatsApp Float */
+        .whatsapp-float { position: fixed; bottom: 40px; right: 40px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 100; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; transition: 0.3s; }
+        .whatsapp-float:hover { transform: scale(1.1); }
+        
+        footer { background: #112240; color: #fff; text-align: center; padding: 2rem; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .booking-form, .contact-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">SHIVAM <span>GUEST HOUSE</span></div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#rooms">Rooms</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#book" class="btn-book-nav">Book Now</a>
+    </header>
+
+    <section class="hero">
+        <h1>Best Stay Nearest to AIIMS Deoghar</h1>
+        <p>10 comfortable rooms available right near the AIIMS main gate. Enjoy 24/7 electricity, water supply, and well-maintained attached bathrooms.</p>
+        <a href="#book" class="btn-primary">Check Availability</a>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">Facilities & Comfort</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-hospital-alt"></i>
+                <h3>Prime Location</h3>
+                <p>Located immediately near the AIIMS Deoghar main gate. The best option for patients and families.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-bolt"></i>
+                <h3>24/7 Utilities</h3>
+                <p>Uninterrupted power and water supply round the clock so you never face inconvenience.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-bath"></i>
+                <h3>Attached Washrooms</h3>
+                <p>Clean, attached bathrooms and toilets in good condition for personal rooms.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-snowflake"></i>
+                <h3>AC & Comfort</h3>
+                <p>Good air conditioning systems and comfortable beds for a peaceful rest.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="rooms" style="background: var(--bg-light);">
+        <h2 class="section-title">Our Rooms & Pricing</h2>
+        <div class="rooms-grid">
+            
+            <div class="room-card">
+                <img src="21938.jpg" alt="Shared Bed Setup" class="room-img">
+                <div class="room-info">
+                    <h3>Single Bed (Dorm/Shared)</h3>
+                    <div class="room-price">₹200 <span style="font-size: 1rem; color: #718096; font-weight: 400;">/ day</span></div>
+                    <div class="amenities">
+                        <i class="fas fa-bed"></i> Comfortable Bed | <i class="fas fa-bolt"></i> 24/7 Power | <i class="fas fa-tint"></i> 24/7 Water
+                    </div>
+                    <a href="https://wa.me/916201366989?text=I%20want%20to%20book%20a%20Single%20Bed%20for%20%E2%82%B9200" class="btn-primary" style="text-align: center;" target="_blank">Book via WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <img src="21947.jpg" alt="Standard Room" class="room-img">
+                <div class="room-info">
+                    <h3>Standard Personal Room</h3>
+                    <div class="room-price">₹700 - ₹800 <span style="font-size: 1rem; color: #718096; font-weight: 400;">/ day</span></div>
+                    <div class="amenities">
+                        <i class="fas fa-door-closed"></i> Private Room | <i class="fas fa-bath"></i> Attached Washroom | <i class="fas fa-fan"></i> Non-AC
+                    </div>
+                    <a href="https://wa.me/916201366989?text=I%20want%20to%20book%20a%20Standard%20Personal%20Room" class="btn-primary" style="text-align: center;" target="_blank">Book via WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <img src="21944.jpg" alt="AC Room" class="room-img">
+                <div class="room-info">
+                    <h3>Premium AC Room</h3>
+                    <div class="room-price">₹1,000 <span style="font-size: 1rem; color: #718096; font-weight: 400;">/ day</span></div>
+                    <div class="amenities">
+                        <i class="fas fa-snowflake"></i> AC Installed | <i class="fas fa-bath"></i> Attached Washroom | <i class="fas fa-bed"></i> Premium Comfort
+                    </div>
+                    <a href="https://wa.me/916201366989?text=I%20want%20to%20book%20a%20Premium%20AC%20Room%20for%20%E2%82%B91000" class="btn-primary" style="text-align: center;" target="_blank">Book via WhatsApp</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2 class="section-title">Property Gallery</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+            <img src="21957.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" alt="Exterior Front">
+            <img src="21941.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" alt="Room Interior">
+            <img src="21938.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" alt="Multiple Beds">
+            <img src="21963.jpg" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" alt="Building View">
+        </div>
+    </section>
+
+    <section id="book" class="booking-section">
+        <h2 class="section-title">Request a Booking</h2>
+        <form class="booking-form" onsubmit="handleBooking(event)">
+            <div class="form-group">
+                <label>Check-in Date</label>
+                <input type="date" required id="checkin">
+            </div>
+            <div class="form-group">
+                <label>Check-out Date</label>
+                <input type="date" required id="checkout">
+            </div>
+            <div class="form-group">
+                <label>Room Preference</label>
+                <select id="roomType">
+                    <option value="Single Bed (₹200)">Single Bed (₹200)</option>
+                    <option value="Personal Room (₹700)">Personal Room (₹700)</option>
+                    <option value="Personal Room (₹800)">Personal Room (₹800)</option>
+                    <option value="Premium AC Room (₹1000)">Premium AC Room (₹1000)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" required id="guestName" placeholder="Enter your name">
+            </div>
+            <button type="submit" class="btn-primary" style="grid-column: 1 / -1; margin-top: 1rem;">Send Request via WhatsApp</button>
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact & Location</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Direct Contact</h3>
+                <br>
+                <p><i class="fas fa-map-marker-alt"></i> Near AIIMS Main Gate, Deoghar, Jharkhand</p>
+                <p><i class="fas fa-phone"></i> +91 6201366989</p>
+                <p><i class="fab fa-whatsapp"></i> +91 6201366989</p>
+                <br>
+                <a href="https://wa.me/916201366989" target="_blank" class="btn-primary" style="background: #25d366;"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+            </div>
+            <div class="map-container">
+                <div>
+                    <i class="fas fa-map-marker-alt" style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                    <h3>Near AIIMS Main Gate, Deoghar</h3>
+                    <p>Search "Shivam Guest House AIIMS Deoghar" on Google Maps to find us easily.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/916201366989" class="whatsapp-float" target="_blank" title="Book via WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <p>© 2026 SHIVAM GUEST HOUSE. All Rights Reserved. | 10 Rooms Available.</p>
+    </footer>
+
+    <script>
+        function handleBooking(event) {
+            event.preventDefault();
+            let checkin = document.getElementById("checkin").value;
+            let checkout = document.getElementById("checkout").value;
+            let room = document.getElementById("roomType").value;
+            let name = document.getElementById("guestName").value;
+            
+            let message = `Hello SHIVAM GUEST HOUSE! My name is ${name}. I want to book a ${room} from ${checkin} to ${checkout}. Is it available?`;
+            let whatsappUrl = `https://wa.me/916201366989?text=${encodeURIComponent(message)}`;
+            
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+                                                                   </html>
+                                                                   
